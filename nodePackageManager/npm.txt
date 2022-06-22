@@ -1,0 +1,28 @@
+npm init // package.json create
+npm init --yes
+npm i (pkgName for first time installation)// to install dependencies in pkg.json
+node index.js // to run the js file
+npm start  // add start in pkg.json/scripts to run "node index.js" 
+npm list // to list all the dependencies and their dependencies with versions
+npm list --depth=0    // to list only the dependencies
+npm view pkgName  // view package details
+npm view mongoose dependencies  // view package dependencies
+npm view mongoose versions   // view package versions
+npm i mongoose@2.4.2    // install a specific version of package
+
+version ^2.3.4 means Major-2,minor-3,patch-4 and ^ is caret => all versions with major 2 accepted
+version ~2.3.4 means Major-2,minor-3,patch-4 and ~ is Tilde => all versions with major 2 and minor 3 accepted
+
+npm outdated   // lists all packages with current, wanted and latest versions
+npm update     // updates all packages to wanted versions
+
+sudo npm i -g npm-check-updates   // installs ncu
+npm-check-updates    // checks for latest versions for package.json
+ncu -u  //upgrade package.json to latest versions (then install dependencies as they are only updated in package.json)
+
+npm i pkgName --save-dev       // stores in developer dependencies of package.json
+
+-g  // global  ex: npm -g outdated
+
+
+
