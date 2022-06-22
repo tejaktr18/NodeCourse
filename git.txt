@@ -1,0 +1,6 @@
+git init // initialize folder for source control
+git remote add origin "git url repo"  // to push this folder to that repo
+git status // to check changed and unchanged files
+git add .  // to add all changed files to stage area
+git commit -m "short message"  // to commit stage area files
+git push origin master  // push the commit

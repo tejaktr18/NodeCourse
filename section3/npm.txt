@@ -1,0 +1,5 @@
+npm init // package.json create
+npm init --yes
+npm i // to install dependencies in pkg.json
+node index.js // to run the js file
+npm start  // add start in pkg.json to run "node index.js" 
