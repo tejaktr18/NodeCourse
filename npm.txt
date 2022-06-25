@@ -24,5 +24,7 @@ npm i pkgName --save-dev       // stores in developer dependencies of package.js
 
 -g  // global  ex: npm -g outdated
 
+npm i -g nodemon  // to avoid running the script after each change.. => nodemon index.js
+
 
 
