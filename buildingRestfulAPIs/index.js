@@ -17,12 +17,13 @@
 var express = require('express');
 var app = express();   // express object
 
+const port = process.env.PORT || 3000         // PORT is an environment variable
 app.get('/',(req, res) => {
-    res.send('Hello World');
+    res.send(JSON.stringify(port));
 });
 
 app.get('/api/courses', (req,res) => {
     res.send(([1,2,3,4,5,6]));
 });
 
-app.listen(3000, () => console.log("listening on port 3000"));
+app.listen(port, () => console.log(`listening on port ${port}`));
