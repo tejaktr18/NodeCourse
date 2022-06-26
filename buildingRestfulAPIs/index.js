@@ -48,4 +48,13 @@ app.post('/api/courses', (req,res) => {
     res.send(course);
 });
 
+app.put('/api/courses/:id', (req,res) => {
+    const course = courses.find(element => element.id === parseInt(req.params.id));
+    let d = course;
+    if (!course) res.status(404).send('course does not exist');
+    course.name = req.body.name;
+    console.log(d);
+    res.send(course);
+});
+
 app.listen(port, () => console.log(`listening on port ${port}`));
