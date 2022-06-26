@@ -26,4 +26,9 @@ app.get('/api/courses', (req,res) => {
     res.send(([1,2,3,4,5,6]));
 });
 
+app.get('/api/courses/:id/:name', (req,res) => {
+    res.send({"params": req.params,"query": req.query});
+    // res.send(req.query);
+});
+
 app.listen(port, () => console.log(`listening on port ${port}`));
