@@ -50,10 +50,18 @@ app.post('/api/courses', (req,res) => {
 
 app.put('/api/courses/:id', (req,res) => {
     const course = courses.find(element => element.id === parseInt(req.params.id));
-    let d = course;
+    // let d = course;
     if (!course) res.status(404).send('course does not exist');
     course.name = req.body.name;
-    console.log(d);
+    // console.log(d);
+    res.send(course);
+});
+
+app.delete('/api/courses/:id', (req,res) => {
+    const course = courses.find(element => element.id === parseInt(req.params.id));
+    if (!course) res.status(404).send('Course not exists');
+    let index = courses.indexOf(course);
+    courses.splice(index,1);
     res.send(course);
 });
 
